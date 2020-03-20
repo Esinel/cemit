@@ -27,21 +27,16 @@ router.get('/:railwayId', (req, res) => {
     const thresholdStatus = queryParams['threshold-status']
     const deviationType = queryParams['deviation-type']
     
+    // Query construction
+    let query = {};
 
+    if (railwayId !== undefined) query['track'] = {$regex: railwayId + ".*"}
+    if (year !== undefined) query['time aquired'] = {$regex: ".*" + year + ".*"}
+    if (deviationType !== undefined) query['type'] = {$regex: ".*" + deviationType + ".*"}
+    if (workorderId !== undefined) query['workorder id'] = workorderId
+    if (thresholdStatus !== undefined) query['threshold status'] = thresholdStatus
+    if (workorderStatus !== undefined) query['status'] = workorderStatus
 
-    let query = {
-        'track': {$regex: railwayId + ".*"}, // K08 - Nordland
-        'time aquired': {$regex: ".*" + year + ".*"},
-        'workorder id': workorderId,
-        'threshold status': thresholdStatus,
-        'status': workorderStatus,
-        'type': {$regex: ".*" + deviationType + ".*"}
-    }
-
-    // remove empty params
-    Object.keys(query).forEach(key => {
-        if (!query[key]) delete query[key]
-    })
 
     console.log(query)
 
