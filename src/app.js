@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express() 
-const port = 3000
+const port = process.env.PORT || 5000
 const databaseConnector = require('./database/db-connector')
 const fileUpload = require('express-fileupload') 
 
