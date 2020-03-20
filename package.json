@@ -1,0 +1,27 @@
+{
+  "name": "cemit",
+  "version": "1.0.0",
+  "description": "Software information system for railway maintenance",
+  "main": "index.js",
+  "scripts": {
+    "start": "",
+    "dev": "nodemon ./src/app.js",
+    "debug": "nodemon --inspect ./src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Esinel/cemit.git"
+  },
+  "author": "Stefanos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Esinel/cemit/issues"
+  },
+  "homepage": "https://github.com/Esinel/cemit#readme",
+  "dependencies": {
+    "csv-parse": "^4.8.8",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.6",
+    "mongodb": "^3.5.5"
+  }
+}
