@@ -1,9 +1,10 @@
 const express = require('express')
-const router = module.exports = express.Router()
+const router = express.Router()
 
 // * SUB-ROUTE DECLARATIONS *
 const railwaysRouter = require('./routers/railways/railways-router')
 const uploadRouter = require('./routers/upload/upload-router')
+const halalRouter = require('./routers/halal-router')
 
  // * ROOT /api *
 router.get('/', (req, res) => res.send('CEMIT api root'))
@@ -13,7 +14,8 @@ router.get('/', (req, res) => res.send('CEMIT api root'))
 router.use('/railways', railwaysRouter)
 router.use('/upload', uploadRouter)
 
+router.use('/halal', halalRouter)
 
-
+module.exports = router
 
 
