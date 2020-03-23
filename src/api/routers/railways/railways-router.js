@@ -46,7 +46,7 @@ router.get('/:railwayId', (req, res) => {
             if (err) throw err
 
             res.send(result)
-        }) 
+        })
 })
 
 
