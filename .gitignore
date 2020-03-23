@@ -1,5 +1,5 @@
 node_modules/
-*.gitignore
+.gitignore
 *.vimrc
 *.sh
 now.json
