@@ -20,7 +20,7 @@
   "homepage": "https://github.com/Esinel/cemit#readme",
   "dependencies": {
     "csv-parse": "^4.8.8",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-fileupload": "^1.1.6",
     "mongodb": "^3.5.5"
   }
